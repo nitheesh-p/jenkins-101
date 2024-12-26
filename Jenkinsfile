@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                echo 'Deliveryy....'
+                echo 'Delivery....'
                 sh '''
                 echo "doing delivery stuff..."
                 '''
