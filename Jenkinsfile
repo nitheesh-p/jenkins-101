@@ -12,8 +12,10 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
+                su
                 cd myapp
                 apk add py3-fire
+                exit
                 '''
             }
         }
