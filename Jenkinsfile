@@ -12,10 +12,10 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                su
                 cd myapp
-                apk add py3-fire
-                exit
+                python3 -m venv /myapp/venv
+                source /myapp/venv/bin/activate
+                pip install -r requirements.txt
                 '''
             }
         }
